@@ -27,7 +27,8 @@ app.get('/api/job', (req, res) => {
             nationality: "",
             salary: 35000,
             endsOn: "01/01/2020",
-            postedOn: "01/09/2019"
+            postedOn: "01/09/2019",
+            type: "Management"
         },
         {
             id: 2, position: "ACCOUNT MANAGER",
@@ -35,7 +36,8 @@ app.get('/api/job', (req, res) => {
             nationality: "",
             salary: 25000,
             endsOn: "01/01/2020",
-            postedOn: "01/09/2019"
+            postedOn: "01/09/2019",
+            type: "Management"
         },
         {
             id: 3, position: "ACCOUNT MANAGER",
@@ -43,7 +45,8 @@ app.get('/api/job', (req, res) => {
             nationality: "",
             salary: 15000,
             endsOn: "01/01/2020",
-            postedOn: "01/09/2019"
+            postedOn: "01/09/2019",
+            type: "Management"
         },
         {
             id: 4, position: "ACCOUNT MANAGER",
@@ -51,7 +54,8 @@ app.get('/api/job', (req, res) => {
             nationality: "",
             salary: 30000,
             endsOn: "01/01/2020",
-            postedOn: "01/09/2019"
+            postedOn: "01/09/2019",
+            type: "Management"
         },
         {
             id: 5, position: "ACCOUNT MANAGER",
@@ -59,7 +63,8 @@ app.get('/api/job', (req, res) => {
             nationality: "",
             salary: 38000,
             endsOn: "01/01/2020",
-            postedOn: "01/09/2019"
+            postedOn: "01/09/2019",
+            type: "Management"
         },
         {
             id: 6, position: "ACCOUNT MANAGER",
@@ -67,7 +72,8 @@ app.get('/api/job', (req, res) => {
             nationality: "",
             salary: 10000,
             endsOn: "01/01/2020",
-            postedOn: "01/09/2019"
+            postedOn: "01/09/2019",
+            type: "Management"
         }
     ]));
 });
