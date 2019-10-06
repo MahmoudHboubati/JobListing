@@ -1,15 +1,17 @@
-import React from 'react';
-import './JobCard.css';
-import JobCard from './JobCard';
+import React, { Component } from 'react';
+import './JobList.css';
+import JobCard from '../job-card/JobCard';
 
-function JobList(props) {
-    return (
-        <div>
-            {props.jobs.map((job) => (
-                <JobCard></JobCard>
-            ))}
-        </div>
-    );
+class JobList extends Component {
+    render() {
+        return (
+            <div>
+                {this.props.jobs.map((job) => (
+                    <JobCard key={job.id}></JobCard>
+                ))}
+            </div>
+        );
+    }
 }
 
 export default JobList;

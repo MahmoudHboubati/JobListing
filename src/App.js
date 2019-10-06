@@ -1,23 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import headerBkGround from './assets/images/banner.jpg';
+import React, { Component } from 'react';
 import './App.css';
+import JobList from './components/job-list/JobList';
+import JobListFilters from './components/job-list-filters/JobListFilters';
+import HeaderBackground from './components/header-background/HeaderBackground';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
+class App extends Component {
 
-      <div className="col-6">
-        <div className="row">
-          <img src={headerBkGround} className="header-background" alt="header-background" />
-          Here we go
-        </div>
+  jobs = [
+    { id: 1, position: "1", description: "1" },
+    { id: 1, position: "1", description: "1" },
+    { id: 1, position: "1", description: "1" },
+    { id: 1, position: "1", description: "1" }
+  ]
+  render() {
+    return (
+      <div className="App">
+        <HeaderBackground></HeaderBackground>
+        <JobListFilters></JobListFilters>
+        <JobList jobs={this.jobs}></JobList>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default App;
