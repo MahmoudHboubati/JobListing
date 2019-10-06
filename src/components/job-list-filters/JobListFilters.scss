@@ -1,3 +1,12 @@
 .job-list-filters {
   margin: 30px 20px;
 }
+
+.filters .dropdown .dropdown-toggle,
+.filters .dropdown .dropdown-toggle:active,
+.filters .dropdown .dropdown-toggle:focus {
+  background: #fff;
+  color: black;
+  border: none;
+  outline: none;
+}

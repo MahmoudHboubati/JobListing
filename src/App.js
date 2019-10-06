@@ -25,11 +25,15 @@ class App extends Component {
       .catch(console.log)
   }
 
+  fetchJobs(filters) {
+    console.log(filters);
+  }
+
   render() {
     return (
       <div className="App">
         <HeaderBackground></HeaderBackground>
-        <JobListFilters></JobListFilters>
+        <JobListFilters applyFilters={this.fetchJobs}></JobListFilters>
         <JobList jobs={this.state.jobs}></JobList>
       </div>
     );

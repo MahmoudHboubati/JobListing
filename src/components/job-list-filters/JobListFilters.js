@@ -4,6 +4,52 @@ import './JobListFilters.scss';
 
 class JobListFilters extends Component {
 
+    constructor(props) {
+        super(props);
+
+        this.toggle = this.toggle.bind(this);
+        this.setNationality = this.setNationality.bind(this);
+
+        this.state = {
+            nationality: { open: false, text: "", value: "" },
+            gender: { open: false, text: "", value: "" },
+            postingDate: { open: false, text: "", value: "" }
+        };
+    }
+
+    toggle() {
+        this.setState(prevState => ({
+            ...prevState,
+            nationality: {
+                ...prevState.nationality,
+                open: !prevState.nationality.open
+            }
+        }));
+    }
+
+    setNationality(nationality) {
+        this.setState(prevState => ({
+            ...prevState,
+            nationality: {
+                text: nationality,
+                value: nationality,
+                open: !prevState.nationality.open
+            }
+        }), () => {
+            this.getFiltersAndEmmet();
+        });
+    }
+
+    getFiltersAndEmmet() {
+        let filters = {
+            gender: this.state.gender.value,
+            nationality: this.state.nationality.value,
+            postingDate: this.state.postingDate.value
+        }
+
+        this.props.applyFilters(filters);
+    }
+
     render() {
         return (
             <div className="job-list-filters">
@@ -28,7 +74,17 @@ class JobListFilters extends Component {
                     </div>
                 </div>
                 <div className="filters">
-
+                    <Dropdown isOpen={this.state.nationality.open} toggle={this.toggle}>
+                        <DropdownToggle caret>
+                            Nationality
+                        </DropdownToggle>
+                        <DropdownMenu>
+                            <DropdownItem><div onClick={() => this.setNationality('German')}>German</div></DropdownItem>
+                            <DropdownItem><div onClick={() => this.setNationality('Britain')}>Britain</div></DropdownItem>
+                            <DropdownItem><div onClick={() => this.setNationality('American')}>American</div></DropdownItem>
+                            <DropdownItem><div onClick={() => this.setNationality('Arabic')}>Arabic</div></DropdownItem>
+                        </DropdownMenu>
+                    </Dropdown>
                 </div>
             </div>
         );

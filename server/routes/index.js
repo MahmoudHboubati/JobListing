@@ -24,7 +24,7 @@ app.get('/api/job', (req, res) => {
         {
             id: 1, position: "PROJECT MANAGER",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…",
-            nationality: "",
+            nationality: "German",
             salary: 35000,
             endsOn: "01/01/2020",
             postedOn: "01/09/2019",
@@ -34,7 +34,7 @@ app.get('/api/job', (req, res) => {
         {
             id: 2, position: "ACCOUNT MANAGER",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…",
-            nationality: "",
+            nationality: "Britain",
             salary: 25000,
             endsOn: "01/01/2020",
             postedOn: "01/09/2019",
@@ -44,7 +44,7 @@ app.get('/api/job', (req, res) => {
         {
             id: 3, position: "ACCOUNT MANAGER",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…",
-            nationality: "",
+            nationality: "American",
             salary: 15000,
             endsOn: "01/01/2020",
             postedOn: "01/09/2019",
@@ -54,7 +54,7 @@ app.get('/api/job', (req, res) => {
         {
             id: 4, position: "ACCOUNT MANAGER",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…",
-            nationality: "",
+            nationality: "UAE",
             salary: 30000,
             endsOn: "01/01/2020",
             postedOn: "01/09/2019",
@@ -64,7 +64,7 @@ app.get('/api/job', (req, res) => {
         {
             id: 5, position: "ACCOUNT MANAGER",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…",
-            nationality: "",
+            nationality: "French",
             salary: 38000,
             endsOn: "01/01/2020",
             postedOn: "01/09/2019",
@@ -74,7 +74,7 @@ app.get('/api/job', (req, res) => {
         {
             id: 6, position: "ACCOUNT MANAGER",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…",
-            nationality: "",
+            nationality: "Arabic",
             salary: 10000,
             endsOn: "01/01/2020",
             postedOn: "01/09/2019",
