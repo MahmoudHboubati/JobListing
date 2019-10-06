@@ -4,7 +4,6 @@
   position: relative;
   top: 0;
   transition: top ease 0.5s;
-  padding: 30px;
 }
 .card:hover {
   -webkit-box-shadow: 5px 0px 23px 0px rgba(0, 0, 0, 0.2);
@@ -29,9 +28,37 @@
 .badge.badge-outline {
   background: #fff;
   border: solid 1px black;
+  text-transform: uppercase;
 }
 
 .badge.radius-10 {
   border-radius: 25px;
   padding: 15px 10px;
+}
+
+.btn-apply {
+  padding: 22px 55px;
+  margin: 20px 10px;
+  background: #43ba80;
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  line-height: 20px;
+  letter-spacing: 0.57px;
+  font-weight: bold;
+}
+
+.card-title {
+  position: absolute;
+  top: 35px;
+  left: 100px;
+}
+
+.card-subtitle {
+  position: absolute;
+  top: 65px;
+  left: 100px;
+}
+
+.card-text {
+  margin-top: 75px;
 }
