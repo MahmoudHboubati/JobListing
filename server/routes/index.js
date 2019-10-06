@@ -1,6 +1,10 @@
 const express = require('express');
 var cors = require('cors');
 const app = express();
+var fs = require('fs');
+
+let rawdata = fs.readFileSync(__dirname + '/jobs.json');
+let jobs = JSON.parse(rawdata);
 
 var whitelist = ['http://localhost:3000'];
 var corsOptions = {
@@ -19,69 +23,9 @@ var corsOptions = {
 app.use(cors(corsOptions));
 
 app.get('/api/job', (req, res) => {
+    console.log(req.query)
     res.setHeader('Content-Type', 'application/json');
-    res.send(JSON.stringify([
-        {
-            id: 1, position: "PROJECT MANAGER",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…",
-            nationality: "German",
-            salary: 35000,
-            endsOn: "01/01/2020",
-            postedOn: "01/09/2019",
-            type: "Management",
-            gender: "Male"
-        },
-        {
-            id: 2, position: "ACCOUNT MANAGER",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…",
-            nationality: "Britain",
-            salary: 25000,
-            endsOn: "01/01/2020",
-            postedOn: "01/09/2019",
-            type: "Management",
-            gender: "Male"
-        },
-        {
-            id: 3, position: "ACCOUNT MANAGER",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…",
-            nationality: "American",
-            salary: 15000,
-            endsOn: "01/01/2020",
-            postedOn: "01/09/2019",
-            type: "Management",
-            gender: "Male"
-        },
-        {
-            id: 4, position: "ACCOUNT MANAGER",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…",
-            nationality: "UAE",
-            salary: 30000,
-            endsOn: "01/01/2020",
-            postedOn: "01/09/2019",
-            type: "Management",
-            gender: "Male"
-        },
-        {
-            id: 5, position: "ACCOUNT MANAGER",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…",
-            nationality: "French",
-            salary: 38000,
-            endsOn: "01/01/2020",
-            postedOn: "01/09/2019",
-            type: "Management",
-            gender: "Male"
-        },
-        {
-            id: 6, position: "ACCOUNT MANAGER",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…",
-            nationality: "Arabic",
-            salary: 10000,
-            endsOn: "01/01/2020",
-            postedOn: "01/09/2019",
-            type: "Management",
-            gender: "Male"
-        }
-    ]));
+    res.send(jobs.data);
 });
 
 app.listen(3001, () =>

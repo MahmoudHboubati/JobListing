@@ -13,19 +13,24 @@ class App extends Component {
   constructor() {
     super()
     this.state = { jobs: [] };
+    this.fetchJobs = this.fetchJobs.bind(this);
   }
 
   componentDidMount() {
-    fetch(this.JOBS_API)
-      .then(res => res.json())
-      .then((data) => {
-        this.setState({ jobs: data });
-        console.log(data);
-      })
-      .catch(console.log)
+    this.fetchJobs({});
   }
 
   fetchJobs(filters) {
+
+    let query = `?nationality=${filters.nationality || ''}&gender=${filters.gender || ''}&postedOn=${filters.postedOn}`;
+
+    fetch(this.JOBS_API + query)
+      .then(res => res.json())
+      .then((data) => {
+        this.setState({ jobs: data });
+      })
+      .catch(console.log);
+
     console.log(filters);
   }
 

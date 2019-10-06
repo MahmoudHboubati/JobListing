@@ -13,7 +13,7 @@ class JobListFilters extends Component {
         this.state = {
             nationality: { open: false, text: "", value: "" },
             gender: { open: false, text: "", value: "" },
-            postingDate: { open: false, text: "", value: "" }
+            postedOn: { open: false, text: "", value: "" }
         };
     }
 
@@ -44,7 +44,7 @@ class JobListFilters extends Component {
         let filters = {
             gender: this.state.gender.value,
             nationality: this.state.nationality.value,
-            postingDate: this.state.postingDate.value
+            postedOn: this.state.postedOn.value
         }
 
         this.props.applyFilters(filters);
