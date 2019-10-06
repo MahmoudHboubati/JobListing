@@ -6,18 +6,31 @@ import HeaderBackground from './components/header-background/HeaderBackground';
 
 class App extends Component {
 
-  jobs = [
-    { id: 1, position: "1", description: "1" },
-    { id: 1, position: "1", description: "1" },
-    { id: 1, position: "1", description: "1" },
-    { id: 1, position: "1", description: "1" }
-  ]
+  SERVER_URL = "http://localhost:3001/";
+  JOBS_API_URL = "api/job";
+  JOBS_API = this.SERVER_URL + this.JOBS_API_URL;
+
+  constructor() {
+    super()
+    this.state = { jobs: [] };
+  }
+
+  componentDidMount() {
+    fetch(this.JOBS_API)
+      .then(res => res.json())
+      .then((data) => {
+        this.setState({ jobs: data });
+        console.log(data);
+      })
+      .catch(console.log)
+  }
+
   render() {
     return (
       <div className="App">
         <HeaderBackground></HeaderBackground>
         <JobListFilters></JobListFilters>
-        <JobList jobs={this.jobs}></JobList>
+        <JobList jobs={this.state.jobs}></JobList>
       </div>
     );
   }
