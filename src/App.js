@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App.scss';
 import JobList from './components/job-list/JobList';
 import JobListFilters from './components/job-list-filters/JobListFilters';
 import HeaderBackground from './components/header-background/HeaderBackground';

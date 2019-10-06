@@ -21,12 +21,54 @@ app.use(cors(corsOptions));
 app.get('/api/job', (req, res) => {
     res.setHeader('Content-Type', 'application/json');
     res.send(JSON.stringify([
-        { id: 1, position: "sr software engineer", description: "this is a new job" },
-        { id: 2, position: "sr software engineer", description: "this is a new job" },
-        { id: 3, position: "sr software engineer", description: "this is a new job" },
-        { id: 4, position: "sr software engineer", description: "this is a new job" },
-        { id: 5, position: "sr software engineer", description: "this is a new job" },
-        { id: 6, position: "sr software engineer", description: "this is a new job" }
+        {
+            id: 1, position: "PROJECT MANAGER",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…",
+            nationality: "",
+            salary: 35000,
+            endsOn: "01/01/2020",
+            postedOn: "01/09/2019"
+        },
+        {
+            id: 2, position: "ACCOUNT MANAGER",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…",
+            nationality: "",
+            salary: 25000,
+            endsOn: "01/01/2020",
+            postedOn: "01/09/2019"
+        },
+        {
+            id: 3, position: "ACCOUNT MANAGER",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…",
+            nationality: "",
+            salary: 15000,
+            endsOn: "01/01/2020",
+            postedOn: "01/09/2019"
+        },
+        {
+            id: 4, position: "ACCOUNT MANAGER",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…",
+            nationality: "",
+            salary: 30000,
+            endsOn: "01/01/2020",
+            postedOn: "01/09/2019"
+        },
+        {
+            id: 5, position: "ACCOUNT MANAGER",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…",
+            nationality: "",
+            salary: 38000,
+            endsOn: "01/01/2020",
+            postedOn: "01/09/2019"
+        },
+        {
+            id: 6, position: "ACCOUNT MANAGER",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…",
+            nationality: "",
+            salary: 10000,
+            endsOn: "01/01/2020",
+            postedOn: "01/09/2019"
+        }
     ]));
 });
 
