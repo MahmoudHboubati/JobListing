@@ -1,5 +1,7 @@
-npm install
+# Joblisting
 
-npm start
+\$ npm install
 
-node server/routes/index.js
+\$npm start
+
+\$node server/routes/index.js
