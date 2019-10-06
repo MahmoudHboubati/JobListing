@@ -76,13 +76,15 @@ class JobListFilters extends Component {
                 <div className="filters">
                     <Dropdown isOpen={this.state.nationality.open} toggle={this.toggle}>
                         <DropdownToggle caret>
-                            Nationality
+                            {this.state.nationality.text || 'nationality'}
                         </DropdownToggle>
                         <DropdownMenu>
-                            <DropdownItem><div onClick={() => this.setNationality('German')}>German</div></DropdownItem>
-                            <DropdownItem><div onClick={() => this.setNationality('Britain')}>Britain</div></DropdownItem>
                             <DropdownItem><div onClick={() => this.setNationality('American')}>American</div></DropdownItem>
                             <DropdownItem><div onClick={() => this.setNationality('Arabic')}>Arabic</div></DropdownItem>
+                            <DropdownItem><div onClick={() => this.setNationality('Britain')}>Britain</div></DropdownItem>
+                            <DropdownItem><div onClick={() => this.setNationality('French')}>French</div></DropdownItem>
+                            <DropdownItem><div onClick={() => this.setNationality('German')}>German</div></DropdownItem>
+                            <DropdownItem><div onClick={() => this.setNationality('UAE')}>UAE</div></DropdownItem>
                         </DropdownMenu>
                     </Dropdown>
                 </div>

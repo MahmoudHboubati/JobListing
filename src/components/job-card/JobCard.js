@@ -15,6 +15,7 @@ class JobCard extends Component {
                     <h5 className="card-title">
                         {job.position}</h5>
                     <h6 className="card-subtitle mb-2 text-muted">{job.postedOn}</h6>
+                    <h6 className="card-subtitle mb-2 text-muted">{job.nationality}</h6>
                     <p className="card-text">{job.description}</p>
                     <button className="btn btn-primary">APPLY AND OFFER</button>
                 </div>

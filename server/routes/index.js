@@ -19,13 +19,17 @@ var corsOptions = {
     }
 }
 
-// Then pass them to cors:
 app.use(cors(corsOptions));
 
 app.get('/api/job', (req, res) => {
     console.log(req.query)
     res.setHeader('Content-Type', 'application/json');
-    res.send(jobs.data);
+
+    let nationality = req.query.nationality || '';
+
+    let result = jobs.data.filter(job => job.nationality == nationality || nationality == '');
+
+    res.send(result);
 });
 
 app.listen(3001, () =>
