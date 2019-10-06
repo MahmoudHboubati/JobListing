@@ -28,7 +28,8 @@ app.get('/api/job', (req, res) => {
             salary: 35000,
             endsOn: "01/01/2020",
             postedOn: "01/09/2019",
-            type: "Management"
+            type: "Management",
+            gender: "Male"
         },
         {
             id: 2, position: "ACCOUNT MANAGER",
@@ -37,7 +38,8 @@ app.get('/api/job', (req, res) => {
             salary: 25000,
             endsOn: "01/01/2020",
             postedOn: "01/09/2019",
-            type: "Management"
+            type: "Management",
+            gender: "Male"
         },
         {
             id: 3, position: "ACCOUNT MANAGER",
@@ -46,7 +48,8 @@ app.get('/api/job', (req, res) => {
             salary: 15000,
             endsOn: "01/01/2020",
             postedOn: "01/09/2019",
-            type: "Management"
+            type: "Management",
+            gender: "Male"
         },
         {
             id: 4, position: "ACCOUNT MANAGER",
@@ -55,7 +58,8 @@ app.get('/api/job', (req, res) => {
             salary: 30000,
             endsOn: "01/01/2020",
             postedOn: "01/09/2019",
-            type: "Management"
+            type: "Management",
+            gender: "Male"
         },
         {
             id: 5, position: "ACCOUNT MANAGER",
@@ -64,7 +68,8 @@ app.get('/api/job', (req, res) => {
             salary: 38000,
             endsOn: "01/01/2020",
             postedOn: "01/09/2019",
-            type: "Management"
+            type: "Management",
+            gender: "Male"
         },
         {
             id: 6, position: "ACCOUNT MANAGER",
@@ -73,7 +78,8 @@ app.get('/api/job', (req, res) => {
             salary: 10000,
             endsOn: "01/01/2020",
             postedOn: "01/09/2019",
-            type: "Management"
+            type: "Management",
+            gender: "Male"
         }
     ]));
 });
