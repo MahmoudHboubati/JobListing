@@ -1,0 +1,37 @@
+.card {
+  border-radius: 4px;
+  margin: 20px 10px;
+  position: relative;
+  top: 0;
+  transition: top ease 0.5s;
+  padding: 30px;
+}
+.card:hover {
+  -webkit-box-shadow: 5px 0px 23px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 5px 0px 23px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 0px 23px 0px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  top: -10px;
+}
+
+.card-icon {
+  position: absolute;
+  left: 25px;
+  top: 30px;
+}
+
+.badge.top-right {
+  position: absolute;
+  right: 20px;
+  top: 30px;
+}
+
+.badge.badge-outline {
+  background: #fff;
+  border: solid 1px black;
+}
+
+.badge.radius-10 {
+  border-radius: 25px;
+  padding: 15px 10px;
+}

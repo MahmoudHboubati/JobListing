@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './JobCard.scss';
+import cardIcon from '../../assets/icons/wreath.svg';
 
 class JobCard extends Component {
     render() {
@@ -9,7 +10,10 @@ class JobCard extends Component {
         return (
             <div className="card" >
                 <div className="card-body">
-                    <h5 className="card-title">{job.position}</h5>
+                    <img className="card-icon" src={cardIcon} alt="Kiwi standing on oval" />
+                    <span className="badge badge-outline top-right radius-10">{job.type}</span>
+                    <h5 className="card-title">
+                        {job.position}</h5>
                     <h6 className="card-subtitle mb-2 text-muted">{job.postedOn}</h6>
                     <p className="card-text">{job.description}</p>
                     <button className="btn btn-primary">APPLY AND OFFER</button>

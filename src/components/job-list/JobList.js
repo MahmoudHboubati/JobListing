@@ -11,7 +11,7 @@ class JobList extends Component {
                         <JobCard key={job.id} job={job}></JobCard>
                     ))}
                 </div>
-                <button className="btn btn-primary w-100">Load more...</button>
+                <button className="btn btn-default w-100">Load more...</button>
             </div>
         );
     }
